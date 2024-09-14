@@ -1,1 +1,1 @@
-web: gunicorn simplyTee:app
+web: gunicorn main:app
