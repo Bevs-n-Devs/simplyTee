@@ -13,5 +13,5 @@ pip freeze > requirements.txt
 
 Now create a `Procfile   in your root directory.
 ```
-web: gunicorn simplyTee:app
+web: gunicorn main:app
 ```
