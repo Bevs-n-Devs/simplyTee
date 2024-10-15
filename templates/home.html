@@ -79,9 +79,13 @@
 <div class="w3-content w3-justify w3-text-grey w3-padding-32" id="about">
     <h2>About</h2>
     <hr class="w3-opacity">
-    <p>Some text about me. Some text about me. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing
-      elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    <p> 
+      Hi, I'm Tee, the founder of Simply Tee, your on-call hairdresser specializing in Afro-Caribbean hairstyles. 
+      With years of experience working with natural hair, I’m passionate about bringing out the beauty in every 
+      texture and curl. Whether you’re looking for box braids, cornrows, plaits, knots, or even a custom wig 
+      installation, I’ve got you covered. I work with both men and women, providing personalized, high-quality 
+      service right at your doorstep. My goal is to make you feel confident and look amazing, whether it’s for a 
+      special event or just everyday life. At Simply Tee, your hair is my priority. 
     </p>
     <h3 class="w3-padding-16">My Skills</h3>
     <p class="w3-wide" style="display: inline-block;">Box Braids</p>
@@ -209,20 +213,19 @@
 
     <div class="w3-section">
       <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Peckham, London</p>
-      <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +00 151515</p>
-      <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: mail@mail.com</p>
+      <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: <a href="mailto:omotolani1@hotmail.co.uk">omotolani1@hotmail.co.uk</a></p>
     </div>
     
     <!-- Image of location/map -->
     <img src="{{ url_for('static', filename='assets/Screenshot 2024-09-16 181315.png') }}" class="w3-image w3-greyscale" style="width:100%;margin:32px 0">
    
-    <p>Lets get in touch. Send me a message:</p>
-    <form action="/action_page.php" target="_blank">
+    <p><strong>Lets get in touch. Send me a message:</strong></p>
+    <form action="/contact" method="POST">
       <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
-      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Email" required name="Email"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="email" placeholder="Email" required name="Email"></p>
       <p>
-        I am interested in...
-        <select>
+        <strong>I am interested in...</strong>
+        <select name="hairstyle">
           <option disabled selected>Please Select A Hairstyle You Would Like To Enquire About</option>
           <option value="box_braids">Box Braids</option>
           <option value="cornrows">Cornrows</option>
@@ -235,7 +238,7 @@
         </select>
       </p>
       <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Subject" required name="Subject"></p>
-      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message" required name="Message"></p>
+      <textarea class="w3-input w3-padding-16 w3-border" rows="7" cols="10" placeholder="Message" name="Message" required></textarea>
       <p>
         <button class="w3-button w3-light-grey w3-padding-large" type="submit">
           <i class="fa fa-paper-plane"></i> SEND MESSAGE
